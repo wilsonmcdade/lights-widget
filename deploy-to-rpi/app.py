@@ -28,7 +28,8 @@ def wheel(pos):
 def setup(pin,num):
 
     #inits strip
-    global strip = Adafruit_NeoPixel(int(num),int(pin),800000,10,False,255,0)
+    strip = Adafruit_NeoPixel(int(num),int(pin),800000,10,False,255,0)
+    global strip
     strip.begin()
 
     #flashes strip red
@@ -38,7 +39,8 @@ def setup(pin,num):
         set_color(Color(0,0,0))
         time.sleep(.2)
 
-    global setup = True
+    setup = True
+    global setup
 
     return True
 
