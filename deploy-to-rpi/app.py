@@ -100,8 +100,8 @@ def off():
     strip.fill((0,0,0))
     return "True"
 
-@app.route('/setup&<pin>&<num>', methods=['GET'])
-def setup(pin,num):
+@app.route('/setup&<num>', methods=['GET'])
+def setup(num):
 
     print("beginning setup...")
     #inits strip
